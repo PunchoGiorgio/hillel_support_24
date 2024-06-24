@@ -1,6 +1,5 @@
 from dataclasses import dataclass
 
-
 # data models
 # entities (or value objects in some cases)
 # Data Transfer Objects
