@@ -161,8 +161,8 @@ CELERY_BROKER_URL = config("BROKER_URL", default="redis://broker:6379/0")
 # CELERY_TASK_SERIALIZER = "pickle"
 # ..
 
-EMAIL_BACKEND = config("MAIL_BACKEND")
-EMAIL_HOST = config("MAIL_HOST")
-EMAIL_PORT = config("MAIL_PORT")
-EMAIL_HOST_USER = config("MAIL_HOST_USER")
-EMAIL_HOST_PASSWORD = config("MAIL_HOST_PASSWORD")
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = config("EMAIL_HOST", "mailhog")
+EMAIL_PORT = config("EMAIL_PORT", 1025)
+EMAIL_HOST_USER = config("EMAIL_USER", "mailhog")
+EMAIL_HOST_PASSWORD = config("EMAIL_PASSWORD", "mailhog")
