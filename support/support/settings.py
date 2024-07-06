@@ -159,7 +159,7 @@ APPEND_SLASH = False
 CACHE_URL = config("CACHE_URL", default="redis://cache:6380/0")
 CELERY_BROKER_URL = config("BROKER_URL", default="redis://broker:6379/0")
 # CELERY_TASK_SERIALIZER = "pickle"
-# ..
+
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = config("EMAIL_HOST", "mailhog")
