@@ -40,9 +40,9 @@ jobs:
       uses: appleboy/ssh-action@v1.0.3
       with:
         host: ${{ secrets.SERVER_HOST }}
+        port: ${{ secrets.SERVER_PORT }}
         username: ${{ secrets.SERVER_USER }}
         key: ${{ secrets.SERVER_SSH_PRIVATE_KEY }}
-        port: ${{ secrets.SERVER_PORT }}
         script: |
           cd ~/hillel_support_2024
           git pull
@@ -52,4 +52,4 @@ jobs:
 
           docker compose exec api python support/manage.py migrate
 
-          # echo "Deployment successfull"
+          echo "Deployment successfull"
