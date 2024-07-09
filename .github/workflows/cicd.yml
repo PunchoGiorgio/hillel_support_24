@@ -52,4 +52,4 @@ jobs:
 
           docker compose exec api python support/manage.py migrate
 
-          echo "Deployment successfull"
+          # echo "Deployment successfull"
