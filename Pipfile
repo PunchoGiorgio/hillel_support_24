@@ -17,6 +17,7 @@ apache-airflow-providers-mysql = "*"
 redis = { version = "~=5.0", extras = ["hiredis"] }
 eventlet = "*"
 mailhog = "*"
+drf-yasg = "~=1.21"
 
 [dev-packages]
 black = "*"
