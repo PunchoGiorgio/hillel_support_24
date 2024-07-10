@@ -4,7 +4,7 @@ from rest_framework.decorators import api_view
 from rest_framework.request import Request
 from users.enums import Role
 
-from . import openapi
+# from . import openapi
 from .enums import Status
 from .models import Issue, Message
 
@@ -21,10 +21,10 @@ class IssueSerializer(serializers.ModelSerializer):
         attrs["status"] = Status.OPENED
         return attrs
 
-    @openapi.schemas.user_create
-    def get(self, request, *args, **kwargs):
-        """Get issues from the database"""
-        return super().get(request, *args, **kwargs)
+    # @openapi.schemas.user_create
+    # def get(self, request, *args, **kwargs):
+    #     """Get issues from the database"""
+    #     return super().get(request, *args, **kwargs)
 
 
 class IssuesAPI(generics.ListCreateAPIView):
