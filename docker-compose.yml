@@ -23,8 +23,6 @@ services:
   database: 
     image: "postgres:16"
     container_name: hillel_support_database
-    # environment:
-    #   - POSTGRES_PASSWORD=${DATABASE_PASSWORD}
     ports:
       - "5432:5432"
     env_file: ".env"

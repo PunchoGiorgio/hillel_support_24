@@ -36,6 +36,7 @@ jobs:
     runs-on: ubuntu-latest
     if: startsWith(github.event.ref, 'refs/tags/v')
     steps:
+    - uses: actions/checkout@v4
     - name: Execute remote SSH commands using SSH KEY
       uses: appleboy/ssh-action@v1.0.3
       with:
@@ -49,7 +50,5 @@ jobs:
           docker compose build
           docker compose down
           docker compose up -d
-
           docker compose exec api python support/manage.py migrate
-
           echo "Deployment successfull"

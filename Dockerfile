@@ -1,6 +1,5 @@
 FROM --platform=linux/amd64 python:3.11.9-slim
 
-# ENV PYTHONUNBUFFERED=1
 
 # Update the system and install packages
 RUN apt-get update -y \
@@ -23,7 +22,6 @@ RUN pip install mysqlclient==2.2.0
 COPY ./Pipfile ./Pipfile.lock /
 RUN pipenv sync --system
 
-# TODO: Investigate
 RUN pip install psycopg[binary]
 
 # cd /app (get or create)

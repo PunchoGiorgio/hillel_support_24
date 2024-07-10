@@ -8,11 +8,6 @@ from users.enums import Role
 
 from .services import Activator
 
-# from . import services
-
-# from .models import ActivationKey
-
-
 User = get_user_model()
 
 
